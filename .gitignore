@@ -1,0 +1,9 @@
+.grunt
+.idea
+.htaccess
+.DC_Store
+.tmp
+Thumbs.db
+node_modules
+bower_components
+dist

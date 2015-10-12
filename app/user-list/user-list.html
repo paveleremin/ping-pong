@@ -1,0 +1,47 @@
+<div>
+    <div class="title">
+        Leadboard
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>
+                    Name
+                    <a ui-sref="user-add" class="pull-right">
+                        Add Player
+                    </a>
+                </th>
+                <th>Won</th>
+                <th>Lost</th>
+                <th>Won / Lost %</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in ctrl.users track by user.id">
+                <td>
+                    {{ $index+1 }}
+                </td>
+                <td>
+                    <img src="http://fakeimg.pl/14">
+                    {{ user.name }}
+                </td>
+                <td>
+                    {{ user.wons }}
+                </td>
+                <td>
+                    {{ user.lost }}
+                </td>
+                <td>
+                    {{ ctrl.wonsPercent(user) }}
+                </td>
+                <td>
+                    {{ (user.wons - user.lost) * 2 }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
